@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins');
+
+body{
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  
+}
+.row{
+  margin: 0px;
+  padding: 0px;
+}
+.container-fluid{
+  /* background-color: #fff; */
+  
+  /* background-image: url('./background.png'); */
+  color: #fff;
+  font-weight: bolder;
+
+}
+.container-fluid::before{
+  background-image: url('./background.png');
+  opacity: 0.5;
+}
+
+.submit{
+  margin: 20px;
+  width: 50px;
+}
+input, select{
+
+  padding: 10px;
+  width: 40%;
+  font-size: 20px;
+  
+  height: 50px;
+  border-radius: 5px;
+}
+input:active{
+border: 2px solid yellowgreen;
+}
+
+.header {
+  height: 100vmin;
+  /* pointer-events: none; */
+}
+.title{
+  text-align: center;
+  font-size: 96px;
+  background-color: red;
+
+  
+}
+
+.logo{
+height: 96px;
+margin-bottom: 10vmin;
+}
+.left{
+  font-size: 80px;
+  line-height: 80%;
+  margin: 0px;    
+  margin-right: -80px;
+  /* display: flex;÷ */
+  
+  /* letter-spacing: 40px; */
+}
+
+#desc{
+  padding-right: 30px;
+  margin-top: 50px;
+  font-size: 32px;
+  line-height: 90%;
+
+}
+.waitlist{
+  margin-top: -80px;
+}
+#divider{
+  color: black;
+  margin-top: -50px;
+  width: 100%;
+  background-color: yellowgreen;
+  height: 20px;
+}
+.form-title{
+  font-size: 30px;
+  padding: 5% 20% 5% 20%;
+}
+#car{
+  width: 112.5%;
+}
+
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
