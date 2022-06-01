@@ -1,10 +1,17 @@
+import { useState } from "react";
 import logo from "./logo.png";
 import "./App.css";
 import "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import car from "./car.png";
+import axios from "axios";
 
 function App() {
+  const [name, setName] = useState("");
+  const [phone, setPhone] = useState("");
+  const [pickup, setPickup] = useState("");
+  const [destination, setDestination] = useState("");
+
   return (
     <div className="container-fluid bg-dark header" style={{ width: 300 }}>
       <center>
@@ -33,11 +40,27 @@ function App() {
               for working professionals.
             </p>
             <div className="text-center">
-              <input className="mb-3" placeholder="Name" />
+              <input
+                className="mb-3"
+                placeholder="Name"
+                onChange={({ target }) => {
+                  setName(target.value);
+                }}
+              />
               <br />
-              <input className="mb-3" placeholder="Phone Number" />
+              <input
+                className="mb-3"
+                placeholder="Phone Number"
+                onChange={({ target }) => {
+                  setPhone(target.value);
+                }}
+              />
               <br />
-              <select>
+              <select
+                onChange={({ target }) => {
+                  setPickup(target.value);
+                }}
+              >
                 <option>Please select pick up bus stop</option>
                 <option>Bus stop 1</option>
                 <option>Bus stop 2 </option>
@@ -45,7 +68,11 @@ function App() {
               </select>
               <br />
               <br />
-              <select>
+              <select
+                onChange={({ target }) => {
+                  setDestination(target.value);
+                }}
+              >
                 <option>Please select destination bus stop</option>
                 <option>Bus stop 1</option>
                 <option>Bus stop 2 </option>
@@ -58,6 +85,19 @@ function App() {
                 type="submit"
                 classname="btn bg-dark h3 submit text-white"
                 value="Join Waitlist"
+                onClick={async (e) => {
+                  e.preventDefault();
+                  const response = await axios.post(
+                    "http://localhost:3000/saveUserRoute",
+                    {
+                      name,
+                      phoneNumber: phone,
+                      pickupLocation: pickup,
+                      dropoffLocation: destination,
+                    }
+                  );
+                  console.log(response);
+                }}
               />
             </div>
           </form>
