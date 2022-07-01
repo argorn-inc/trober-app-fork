@@ -1,0 +1,264 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins');
+
+body{
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500; 
+  overflow-x: hidden; 
+}
+
+p, div {
+  font-family: 'Poppins', sans-serif;
+}
+
+#noMargin{
+  margin: 0px;
+  padding: 0px;
+}
+
+.displayFlex {
+  display: flex;
+  margin-left: 20%;
+}
+
+.margin0 {
+  margin: 0px;
+}
+
+.marginTop20 {
+  margin-top: 20px;
+}
+
+.height100white {
+  height: 100px;
+  background-color: white;
+}
+
+.flexColumn {
+  display: flex;
+  flex-direction: column;
+}
+
+.noStyleBlack {
+  text-decoration: none;
+  color: black;
+}
+
+.footerStyle {
+  display: flex;
+  justify-content: space-between;
+  height: 150px;
+  width: 100%;
+  background-color: #01DDA7;
+}
+
+.copywrite {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+}
+
+.loaderContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loader {
+  margin-top: -30px;
+  width: 200px;
+}
+
+.container-fluid{
+  /* background-color: #fff; */
+  
+  /* background-image: url('./background.png'); */
+  color: #fff;
+  font-weight: bolder;
+
+}
+.container-fluid::before{
+  background-image: url('./images/background.png');
+  opacity: 0.5;
+}
+
+.submit{
+  margin: 20px;
+  width: 50px;
+}
+input, select{
+
+  padding: 10px;
+  width: 60%;
+  font-size: 20px;
+  
+  height: 50px;
+  border-radius: 5px;
+}
+input:active{
+border: 2px solid yellowgreen;
+}
+
+
+.title{
+  text-align: center;
+  font-size: 96px;
+  background-color: red;
+}
+
+.logo{
+height: 96px;
+margin-bottom: 10vmin;
+}
+.left{
+  font-size: 80px;
+  line-height: 80%;
+  margin: 0px;    
+  padding-top:40px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: bolder;
+  /* margin-right: -80px; */
+  /* display: flex;÷ */
+  
+  letter-spacing: 2px;
+}
+#waitlistbutton {
+  letter-spacing: 0px;
+  font-family: 'Poppins', sans-serif;
+  color: 'black';
+  font-weight: bold;
+  background-color: #B7C945;
+}
+
+#desc{
+  padding-right: 30px;
+  margin-top: 20px;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 90%;
+  font-family: 'Poppins', sans-serif;
+  letter-spacing: 0px;
+}
+.waitlist{
+  margin-top: -80px;
+}
+
+#joinWaitlist {
+  color:black;
+  font-weight: bold;
+}
+
+#divider{
+  color: black;
+  /* margin-top: -50px; */
+  width: 100%;
+  background-color: #B7C945;
+  height: 20px;
+}
+.form-title{
+  font-size: 30px;
+  padding: 5% 20% 5% 20%;
+  font-family: 'Poppins', sans-serif;
+  letter-spacing: 1px;
+}
+
+#car{
+  position:relative;
+  /* width: 100%; */
+  left: 10px;
+}
+
+#waitlistButton {
+  background-color: #B7C945;
+  width: 20%;
+  height:50px;
+  border-radius: 5px;
+  font-size: 20px;
+  padding:10px;
+  border: none;
+}
+
+#footer {
+  margin-left: 30px;
+  margin-top: 50px;
+  color:black;
+  font-size: 18px;
+}
+
+#footerRight {
+  margin-right: 30px;
+  margin-top: 30px;
+  color:black;
+  /* font-size: 18px; */
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+@media only screen and (max-width: 600px) {
+  .left {
+    font-size: 42px;
+  }
+  #desc {
+    font-size: 16px; 
+  }
+}
+
+@media only screen and (max-width: 720px) {
+  #joinWaitlist{
+    font-size: 14px;
+    padding: 2.5px;
+  }
+  #joinWaitlistTop{
+    font-size: 14px;
+    margin:0px;
+  }
+
+  #waitlistButton {
+    width: 30%;
+  }
+
+  #footer {
+    font-size: 12px;
+  }
+
+  #footerRight {
+    font-size: 12px;
+  }
+  .form-title {
+    font-size: 16px;
+  }
+}
+
+#mainBody {
+  padding-right: 0px;
+  padding-left: 0px;
+}
